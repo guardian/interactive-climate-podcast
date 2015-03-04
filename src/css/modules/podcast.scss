@@ -12,7 +12,7 @@
 		padding-right: 20px;
 		text-align: right;
 		color: #AAD8F1;
-		font-size: 8rem;
+		font-size: 6rem;
 		vertical-align: top;
 	}
 
@@ -31,6 +31,15 @@
 		padding-top: 20px;
 		font-size: .8rem;
 		line-height: 1.25rem;
+		color: #D8D8D8;
+	}
+}
+
+.notPlaying {
+	border-top: 1px solid #4A4A4A;
+
+	.epContent {
+		display: none;
 	}
 }
 
@@ -43,6 +52,7 @@
 	.modHeader {
 		width: 100%;
 		font-size: 1rem;
+		line-height: 1.5rem;
 		color: #333;
 	}
 }
@@ -88,6 +98,107 @@
 
 }
 
+.moduleVisual{
+
+	.modHeader {
+		position: relative;
+		padding-right: 40px;
+	}
+	.modImgVid {
+		width: 100%;
+		height: 250px;
+		background: #666;
+		margin-top: 20px;
+	}
+
+	.guShareBtn {
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+}
+
+.moduleReferences {
+	margin: 0 0 20px 0;
+	padding: 0;
+	.modHeader {
+		color: #F1F1F1;
+	}
+
+	.modCitation {
+		margin-top: 10px;
+		padding-top: 10px;
+		position: relative;
+		padding-left: 35px;
+		min-height: 30px;
+		background-size: 20px;
+		line-height: 1.75rem;
+		background-position: left center;
+		background-repeat: no-repeat;
+		background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCAzMCAzMCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMzAgMzAiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxnPjxwb2x5Z29uIGZpbGw9IiM3Njc2NzYiIHBvaW50cz0iMjcuMywyOC4zIDI1LjgsMjkuOCA1LjEsMjkuOCAzLjYsMjguMyAzLjYsMS43IDUuMSwwLjIgMjEuMywwLjIgMjcuMyw2LjEgIi8+PC9nPjxyZWN0IHg9IjYuNSIgeT0iOS4xIiBmaWxsPSIjRkZGRkZGIiB3aWR0aD0iMTcuOCIgaGVpZ2h0PSIyLjIiLz48cmVjdCB4PSI2LjUiIHk9IjEzLjUiIGZpbGw9IiNGRkZGRkYiIHdpZHRoPSIxNy44IiBoZWlnaHQ9IjIuMiIvPjxyZWN0IHg9IjYuNSIgeT0iMTgiIGZpbGw9IiNGRkZGRkYiIHdpZHRoPSIxMC40IiBoZWlnaHQ9IjIuMiIvPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjwvc3ZnPg==);
+
+		a, a:visited, a:active {
+			color: #fff;
+			text-decoration: none;
+		}
+
+		a:hover {
+			text-decoration: underline;
+		}
+
+	}
+
+	.modCitation::after {
+		width: 60px;
+		height: 1px;
+		background: #979797;
+		position: absolute;
+		content: '';
+		top: 0;
+		left: 0;
+	}
+}
+
+.moduleQuote {
+	position: relative;
+	margin-top: 20px;
+	padding: 15px 0;
+
+	.guShareBtn {
+		position: absolute;
+		left: 20px;
+		top: 0;
+	}
+
+	.modQuote {
+		display: table;
+		vertical-align: top;
+		border-bottom: 1px solid #979797;
+
+		
+		.quotePhoto {
+			display: table-cell;
+			width: 80px;
+		}
+
+		.quoteText {
+			display: table-cell;
+			padding: 20px 0;
+			font-size: 1.5rem;
+			line-height: 1.75rem;
+
+			span {
+				font-size: 1rem;
+				color: #979797;
+				display: block;
+			}
+		}
+	}
+
+}
+
+
+
 
 
 
@@ -106,7 +217,7 @@
 		}
 	}
 
-	.episodeContent {
+	.epContent {
 		padding: 0px;
 		display: inline-block;
 
@@ -120,6 +231,8 @@
 			width: 440px;
 		}
 	}
+
+
 }
 
 @media (min-width: 980px){
@@ -142,7 +255,7 @@
 
 	}
 
-	.episodeContent {
+	.epContent {
 		padding: 60px;
 
 		.colB {
@@ -164,6 +277,8 @@
 			font-size: 1.25rem;
 		}
 	}
+
+
 
 }
 
@@ -187,7 +302,28 @@
 
 	}
 
-	.episodeContent {
+	.notPlaying {
+		.episodeLead  {
+	
+
+			.epTitle {
+				font-size: 2.5rem;
+			}
+
+			.epBlock {
+				width: 300px;
+				font-size: 10rem;
+			}
+
+			.epDesc {
+				font-size: 1rem;
+				line-height: 1.5rem;
+			}
+
+		}
+	}
+
+	.epContent {
 		padding: 60px;
 
 		.colB {
@@ -199,6 +335,44 @@
 			float: right;
 			width: 830px;
 		}
+	}
+
+	.moduleWrapper {
+	
+
+		.moduleKeyWord {
+			display: inline-block;
+			max-width: 49%;
+			padding-right: 10px;
+			vertical-align: top;
+		}
+	}
+
+	.moduleVisual {
+		display: table;
+
+		.modHeader {
+			display: table-cell;
+			width: 160px;
+			vertical-align: top;
+			padding-right: 0;
+			padding-top: 40px;
+		}
+
+		.moduleWrapper {
+			display: table-cell;
+			vertical-align: top;
+
+			.modImgVid {
+				margin-top: 0;
+			}
+
+		}
+
+		.guShareBtn {
+			left: 0;
+		}
+
 	}
 
 }

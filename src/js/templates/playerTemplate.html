@@ -1,25 +1,36 @@
 
-<div class='guCover'>
-	<div class='guCoverHeader'>
-		<div class='guShareBtn shareFbk'></div>
-		<div class='guShareBtn shareTwt'></div>
-	</div>
-	<div class='guCoverTitle'>
-		<div class='guEpNumber f-bodyCopy'>3</div>
-		<div class='guEpTitle f-bodyCopy'>Picking a focus</div>
-	</div>
+<div class='podcastPlayer'>
+
+
+
 	<div class='guAudioPlayer'>
-		<div class='guPlayerBtn guPlay'></div>
-		<div class='guTimer f-textSans'>3:10 / 3:30</div>
+		<div class='playerContainer'>
+			<div class='guPlayerBtn '>
+				<svg x="0px" y="0px" viewBox="0 0 100 100">
+					<circle fill="#AAD8F1" cx="50" cy="50" r="48"/>
+					<polygon class='guPause' points="45.9,65.5 37.6,65.5 37.6,34.5 39.6,32.5 45.9,32.5 "/>
+					<polygon class='guPause' points="62.4,63.5 60.4,65.5 54.1,65.5 54.1,32.5 62.4,32.5 "/>
+					<polygon class='guPlay' points="72.2,49.3 38.1,35.2 36.9,36.1 36.9,63.9 38.1,64.8 72.2,50.7 "/>
+				</svg>
+			</div>
+		
+			<div class='guProgressContainer'>	
+				<div class='guListenLabel f-bodycopy'>Listen</div>
+				<div class='guProgressBar'>
+					<div class='guProgress'></div>
+				</div>
+				<div class='guTimer f-textSans'>3:10 / 3:30</div>
+			</div>
+		</div>
+
+		<div class='guPodcastLinks'>
+			<div class='guPodcastLink iTunes f-textSans'>Subscribe via iTunes</div>
+			<div class='guPodcastLink download f-textSans'>Download MP3</div>
+		</div>
 	</div>
-	<div class='guProgressBar'>
-		<div class='guProgress'></div>
-	</div>
-	<div class='guPodcastLinks'>
-		<div class='guPodcastLink f-textSans'>Subscribe via iTunes</div>
-		<div class='guPodcastLink f-textSans'>Download MP3</div>
-		<div class='guPodcastLink f-textSans'>Podcast feed URL</div>
-	</div>
+
+	
+	
 
 </div>
 
@@ -27,66 +38,33 @@
 
 <style>
 
-.guCover {
-	width: 350px;
-	height: 400px;
-	background: #484848;
-	padding: 15px;
-	
-}
 
-.guCoverHeader {
-	width: 100%;
-	margin-bottom: 10px;
-	border-bottom: 1px solid #979797;
-	text-align: right;
-	padding-bottom: 10px;
-}
-
-.guCoverTitle {
-	width: 100%;
-	display: table;
-	vertical-align: top;
-	min-height: 150px;
-}
-
-.guEpNumber {
-	display: table-cell;
-	width: 80px;
-	text-align:right;
-	padding-right: 15px;
-	color: #AAD8F1;
-	font-size: 80px;
-	line-height: 1em;
-	vertical-align: top;
-}
-
-.guEpTitle {
-	display: table-cell;
-	text-align: left;
-	vertical-align: top;
-	font-size: 2.5em;
-	padding-top: 10px;
-	color: #F1F1F1;
-}
 
 .guAudioPlayer {
 	width: 100%;
+	margin-top: 10px;
 
+}
+
+.playerContainer {
+	display: table;
+	width: 100%;
 }
 
 .guPlayerBtn {
-	width: 35px;
-	height: 35px;
-	display: inline-block;
-}
-
-.guPlay {
-	background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCAzNSAzNSIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMzUgMzUiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxnPjxjaXJjbGUgZmlsbD0iI0FBRDhGMSIgY3g9IjE3LjUiIGN5PSIxNy41IiByPSIxNy4xIi8+PC9nPjxwb2x5Z29uIHBvaW50cz0iMjUuNCwxNy4yIDEzLjIsMTIuMiAxMi44LDEyLjUgMTIuOCwyMi41IDEzLjMsMjIuOCAyNS40LDE3LjggIi8+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PC9zdmc+);
+	width: 40px;
+	display: table-cell;
 }
 
 .guPause {
-	background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCAzNSAzNSIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMzUgMzUiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxnPjxjaXJjbGUgZmlsbD0iI0FBRDhGMSIgY3g9IjE3LjUiIGN5PSIxNy41IiByPSIxNy4xIi8+PC9nPjxwb2x5Z29uIHBvaW50cz0iMTUuOCwyNS42IDExLjgsMjUuNiAxMS44LDEwLjggMTIuOCw5LjggMTUuOCw5LjggIi8+PHBvbHlnb24gcG9pbnRzPSIyMy42LDI0LjYgMjIuNywyNS42IDE5LjcsMjUuNiAxOS43LDkuOCAyMy42LDkuOCAiLz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48L3N2Zz4=);
+	display: none;
+}
+
+.guProgressContainer {
+	max-width: 640px;
+	padding-left: 10px;
+	display: table-cell;
+	vertical-align: top;
 }
 
 .guTimer {
@@ -95,8 +73,14 @@
 	display: inline-block;
 }
 
+.guListenLabel {
+	color: #fff;
+	font-size: .8rem;
+	line-height: .8rem;
+}
+
 .guProgressBar {
-	margin-top: 10px;
+	margin: 5px 0;
 	position: relative;
 	height: 4px;
 	background: #767676;
@@ -112,14 +96,70 @@
 .guPodcastLinks {
 	width: 100%;
 	margin: 10px 0;
+	border-top: 1px solid #767676;
+	padding-top: 10px;
 }
 
 .guPodcastLink {
 	float: left;
-	padding: 5px 0 5px 35px;
-	width: 50%;
+	padding: 5px 0 5px 0px;
+	width: 100%;
 	color: #fff;
-	font-size: 12px;
+	font-size: .85rem;
+	height: 18px;
+	line-height: .85rem;
+	margin: 5px 0;
+}
+
+.guPodcastLink.iTunes {
+	padding: 5px 0 5px 25px;
+	background-size: 15px;
+	background-repeat: no-repeat;
+	background-position: left center;
+	background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCAzMCAzMCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMzAgMzAiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxwb2x5Z29uIGZpbGw9IiNGRkZGRkYiIHBvaW50cz0iMTMuNiwyLjcgNi4zLDEwIDEuMywxMCAwLDExLjMgMCwxOC43IDEuMiwxOS45IDYuMywxOS45IDEzLjYsMjcuMyAxNSwyNy4zIDE1LDIuNyAiLz48Zz48cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNMjcuNiwxNWMwLDMuNy0xLjMsNy0zLjQsOS43bDAuNywwLjdjMy0yLjUsNS02LjMsNS0xMC41cy0xLjktOC01LTEwLjVsLTAuNywwLjdDMjYuMyw3LjksMjcuNiwxMS4zLDI3LjYsMTV6Ii8+PC9nPjxnPjxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik0yMC41LDE1YzAsMi4xLTAuNiw0LjEtMS43LDUuN2wwLjksMC45YzEuNy0xLjcsMi43LTQsMi43LTYuNmMwLTIuNi0xLTQuOS0yLjctNi42bC0wLjksMC45QzE5LjksMTAuOSwyMC41LDEyLjgsMjAuNSwxNXoiLz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PC9zdmc+);
+
+}
+
+
+.guPodcastLink.download {
+	padding: 5px 0 5px 25px;
+	background-size: 15px;
+	background-repeat: no-repeat;
+	background-position: left center;
+	background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCAzMCAzMCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMzAgMzAiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxjaXJjbGUgZmlsbD0iI0ZGRkZGRiIgY3g9IjYuMSIgY3k9IjIzLjYiIHI9IjUuNCIvPjxnPjxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik0yOS4xLDIzLjZjMi0xMy41LTkuNS0yNS0yMy0yM1YyYzExLjksMCwyMS42LDkuNywyMS42LDIxLjYiLz48L2c+PHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTE5LjcsMjMuNmMxLjUtOC40LTUuMS0xNS0xMy41LTEzLjV2MS40YzYuNywwLDEyLjIsNS40LDEyLjIsMTIuMmgwSDE5Ljd6Ii8+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PC9zdmc+);
+
+
+}
+
+@media (min-width: 980px){
+	.playerContainer {
+		width: 360px;
+		float: left;
+	}
+
+	.guPodcastLinks {
+		width: 180px;
+		float: left;
+		border-top: none;
+		padding: 0 0 0 15px;
+		margin: 0;
+		
+	}
+
+	.guPlayerBtn {
+		width: 100px;
+	}
+
+	.guListenLabel {
+		font-size: 1.15rem;
+		line-height: 1.25rem;
+	}
+
+	.guProgressContainer {
+		vertical-align: middle;
+		border-right: 1px solid #4A4A4A;
+		padding-right: 20px;
+	}
 }
 
 </style>
