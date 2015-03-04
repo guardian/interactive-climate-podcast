@@ -1,0 +1,90 @@
+
+
+.guSlice{
+	position: relative;
+}
+
+.guSlice::before, .guSlice::after {
+	background: rgba(0,0,0,0.05);
+	height: 100%;
+	position: absolute;
+	content: " ";
+}
+
+.guSlice::after {
+	right: 0;
+	top: 0;
+}
+
+.guHeader {
+	background: #CED7CD;
+	height: 100px;
+}
+
+.guNav {
+	background: #DFDFDF;
+	line-height: 2.5em;
+}
+
+.guContent {
+	background: #333;
+}
+
+.guContainer {
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 10px;
+}
+
+@media (min-width: 740px){
+	
+	.guSlice::before, .guSlice::after {
+		width: calc((100% - 46.25rem) / 2);
+	}
+
+	.guContainer {
+		width: 740px;
+		padding: 0 15px;
+	}
+
+
+}
+
+@media (min-width: 980px){
+	
+	.guSlice::before, .guSlice::after {
+		width: calc((100% - 61.25rem) / 2);
+	}
+
+	.guContainer {
+		width: 980px;
+	}
+
+}
+
+@media (min-width: 1140px){
+	
+	.guSlice::before, .guSlice::after {
+		width: calc((100% - 71.25rem) / 2);
+	}
+
+	.guContainer {
+		width: 1140px;
+	}
+
+}
+
+@media (min-width: 1300px){
+	
+	.guSlice::before, .guSlice::after {
+		width: calc((100% - 81.25rem) / 2);
+	}
+
+	.guContainer {
+		width: 1300px;
+
+	}
+
+}
+
+

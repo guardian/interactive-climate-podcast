@@ -3,17 +3,60 @@
  * File:    Main SCSS
  */
 
-$guss-webfonts-base-url: '//pasteup.guim.co.uk/fonts/';
+@import 'modules/reset';
+@import 'modules/fonts';
+@import 'modules/furniture';
 
-@import 'bower_components/pasteup-palette/src/_palette';
-@import 'bower_components/guss-webfonts/src/_webfonts.scss';
-@import 'bower_components/guss-typography/_typography.scss';
-
-@import 'modules/sample';
-@include guss-webfonts();
-@include guss-typography-defaults;
+@import 'modules/container';
+@import 'modules/nav';
+@import 'modules/podcast';
 
 .guInteractive {
-    color: map-get($pasteup-palette, 'guardian-brand');
+    //color: map-get($pasteup-palette, 'guardian-brand');
+
+    div {
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+    }
+
+
 }
+
+
+//mobile app
+.article__header {display: none !important;}
+//ngw
+.content__head{display:none;}
+.content .gs-container{padding:0;margin:0;max-width:100%;}
+.content__main-column--interactive{margin:0 !important;padding:0 !important;}
+.interactive{margin:0 !important;}
+.element-interactive.interactive{margin:0 !important;}
+.content--interactive{padding-top:0;}
+.content__meta-container{display:none !important;}
+
+
+
+.guShareBtn {
+	display: inline-block;
+	overflow: hidden;
+	width: 32px;
+	height: 32px;
+	margin-right: 5px;
+	padding: 0;
+	cursor: pointer;
+	border: 1px solid #666;
+	border-radius: 20px;
+	background-color: #666;
+}
+
+.guShareBtn.shareFbk {
+	background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iLTIgLTIgMzIgMzIiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgLTIgLTIgMzYgMzYiPjxwYXRoIGQ9Ik0xNy44NjQgMTQuMDI1aC0yLjk4NHY3Ljk3NWgtMi44OXYtNy45NzVoLTEuOTg5di0yLjg3M2gxLjk4OXYtMi40NTRjMC0xLjkyNiAxLjA5OS0zLjY5NyAzLjk3NS0zLjY5NyAxLjE2MiAwIDIuMDIuMTEyIDIuMDIuMTEybC0uMDY4IDIuOThzLS44NzgtLjAwNy0xLjgzNC0uMDA3Yy0xLjAzNSAwLTEuMjAzLjQ3Ny0xLjIwMyAxLjI2OXYxLjc5OGgzLjEybC0uMTM2IDIuODcyeiIgZmlsbD0iI2ZmZiIvPjwvc3ZnPg==);
+}
+
+.guShareBtn.shareTwt {
+	background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iLTIgLTIgMzIgMzIiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgLTIgLTIgMzYgMzYiPjxwYXRoIGQ9Ik0yMS4yNTUgMTAuNDg0bC4wMTIuNDU3YzAgNC42NzItMy41MDUgMTAuMDU5LTkuOTE5IDEwLjA1OS0xLjk3IDAtMy44MDEtLjU4NS01LjM0OC0xLjU5LjI3Mi4wMzUuNTUxLjA0OS44MzEuMDQ5IDEuNjM2IDAgMy4xMzgtLjU2NSA0LjMzMS0xLjUxNS0xLjUyNS0uMDI1LTIuODEzLTEuMDQ3LTMuMjUzLTIuNDQ5LjIxMS4wNDEuNDMyLjA2MS42NTQuMDYxLjMxOSAwIC42MjgtLjA0My45MTgtLjEyMS0xLjU5OC0uMzI1LTIuNzk3LTEuNzU1LTIuNzk3LTMuNDd2LS4wNDNjLjQ3Mi4yNjQgMS4wMTEuNDI0IDEuNTc5LjQ0MS0uOTMzLS42MzItMS41NTItMS43MTUtMS41NTItMi45NDIgMC0uNjQ3LjE3Ni0xLjI1NS40NzMtMS43NzkgMS43MjEgMi4xNCA0LjI4OSAzLjU0NiA3LjE4OCAzLjY5Ni0uMDYtLjI1OS0uMDg5LS41MzEtLjA4OS0uODA2IDAtMS45NTIgMS41NTctMy41MzUgMy40ODgtMy41MzUgMS4wMDIgMCAxLjkxLjQzIDIuNTQ2IDEuMTE4Ljc5My0uMTU5IDEuNTQtLjQ1MyAyLjIxNC0uODU5LS4yNjEuODI2LS44MTMgMS41MTktMS41MzMgMS45NTcuNzA3LS4wODQgMS4zNzgtLjI3NiAyLjAwMi0uNTU3LS40NzIuNzA2LTEuMDYyIDEuMzI5LTEuNzQ1IDEuODI2eiIgZmlsbD0iI2ZmZiIvPjwvc3ZnPg==);
+}
+
+
 

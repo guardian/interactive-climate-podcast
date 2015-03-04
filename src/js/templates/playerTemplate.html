@@ -1,0 +1,133 @@
+
+<div class='guCover'>
+	<div class='guCoverHeader'>
+		<div class='guShareBtn shareFbk'></div>
+		<div class='guShareBtn shareTwt'></div>
+	</div>
+	<div class='guCoverTitle'>
+		<div class='guEpNumber f-bodyCopy'>3</div>
+		<div class='guEpTitle f-bodyCopy'>Picking a focus</div>
+	</div>
+	<div class='guAudioPlayer'>
+		<div class='guPlayerBtn guPlay'></div>
+		<div class='guTimer f-textSans'>3:10 / 3:30</div>
+	</div>
+	<div class='guProgressBar'>
+		<div class='guProgress'></div>
+	</div>
+	<div class='guPodcastLinks'>
+		<div class='guPodcastLink f-textSans'>Subscribe via iTunes</div>
+		<div class='guPodcastLink f-textSans'>Download MP3</div>
+		<div class='guPodcastLink f-textSans'>Podcast feed URL</div>
+	</div>
+
+</div>
+
+
+
+<style>
+
+.guCover {
+	width: 350px;
+	height: 400px;
+	background: #484848;
+	padding: 15px;
+	
+}
+
+.guCoverHeader {
+	width: 100%;
+	margin-bottom: 10px;
+	border-bottom: 1px solid #979797;
+	text-align: right;
+	padding-bottom: 10px;
+}
+
+.guCoverTitle {
+	width: 100%;
+	display: table;
+	vertical-align: top;
+	min-height: 150px;
+}
+
+.guEpNumber {
+	display: table-cell;
+	width: 80px;
+	text-align:right;
+	padding-right: 15px;
+	color: #AAD8F1;
+	font-size: 80px;
+	line-height: 1em;
+	vertical-align: top;
+}
+
+.guEpTitle {
+	display: table-cell;
+	text-align: left;
+	vertical-align: top;
+	font-size: 2.5em;
+	padding-top: 10px;
+	color: #F1F1F1;
+}
+
+.guAudioPlayer {
+	width: 100%;
+
+}
+
+.guPlayerBtn {
+	width: 35px;
+	height: 35px;
+	display: inline-block;
+}
+
+.guPlay {
+	background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCAzNSAzNSIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMzUgMzUiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxnPjxjaXJjbGUgZmlsbD0iI0FBRDhGMSIgY3g9IjE3LjUiIGN5PSIxNy41IiByPSIxNy4xIi8+PC9nPjxwb2x5Z29uIHBvaW50cz0iMjUuNCwxNy4yIDEzLjIsMTIuMiAxMi44LDEyLjUgMTIuOCwyMi41IDEzLjMsMjIuOCAyNS40LDE3LjggIi8+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PC9zdmc+);
+}
+
+.guPause {
+	background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCAzNSAzNSIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMzUgMzUiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxnPjxjaXJjbGUgZmlsbD0iI0FBRDhGMSIgY3g9IjE3LjUiIGN5PSIxNy41IiByPSIxNy4xIi8+PC9nPjxwb2x5Z29uIHBvaW50cz0iMTUuOCwyNS42IDExLjgsMjUuNiAxMS44LDEwLjggMTIuOCw5LjggMTUuOCw5LjggIi8+PHBvbHlnb24gcG9pbnRzPSIyMy42LDI0LjYgMjIuNywyNS42IDE5LjcsMjUuNiAxOS43LDkuOCAyMy42LDkuOCAiLz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48L3N2Zz4=);
+}
+
+.guTimer {
+	color: #fff;
+	font-size: 12px;
+	display: inline-block;
+}
+
+.guProgressBar {
+	margin-top: 10px;
+	position: relative;
+	height: 4px;
+	background: #767676;
+}
+
+.guProgress {
+	background: #AAD8F1;
+	position: absolute;
+	width: 50%;
+	height: 4px;
+}
+
+.guPodcastLinks {
+	width: 100%;
+	margin: 10px 0;
+}
+
+.guPodcastLink {
+	float: left;
+	padding: 5px 0 5px 35px;
+	width: 50%;
+	color: #fff;
+	font-size: 12px;
+}
+
+</style>
+
+<script>
+
+component.exports = {
+
+}
+
+</script>
