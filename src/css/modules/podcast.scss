@@ -38,9 +38,6 @@
 .notPlaying {
 	border-top: 1px solid #4A4A4A;
 
-	.epContent {
-		display: none;
-	}
 }
 
 
@@ -132,8 +129,8 @@
 		padding-left: 35px;
 		min-height: 30px;
 		background-size: 20px;
-		line-height: 1.75rem;
-		background-position: left center;
+		line-height: 1.4rem;
+		background-position: left 10px;
 		background-repeat: no-repeat;
 		background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCAzMCAzMCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMzAgMzAiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxnPjxwb2x5Z29uIGZpbGw9IiM3Njc2NzYiIHBvaW50cz0iMjcuMywyOC4zIDI1LjgsMjkuOCA1LjEsMjkuOCAzLjYsMjguMyAzLjYsMS43IDUuMSwwLjIgMjEuMywwLjIgMjcuMyw2LjEgIi8+PC9nPjxyZWN0IHg9IjYuNSIgeT0iOS4xIiBmaWxsPSIjRkZGRkZGIiB3aWR0aD0iMTcuOCIgaGVpZ2h0PSIyLjIiLz48cmVjdCB4PSI2LjUiIHk9IjEzLjUiIGZpbGw9IiNGRkZGRkYiIHdpZHRoPSIxNy44IiBoZWlnaHQ9IjIuMiIvPjxyZWN0IHg9IjYuNSIgeT0iMTgiIGZpbGw9IiNGRkZGRkYiIHdpZHRoPSIxMC40IiBoZWlnaHQ9IjIuMiIvPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjwvc3ZnPg==);
 

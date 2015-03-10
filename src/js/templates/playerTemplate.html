@@ -1,25 +1,30 @@
 
 <div class='podcastPlayer'>
-
-
+	<audio >
+		<source src="{{podcast.url}}" type="audio/mpeg">
+	</audio>
 
 	<div class='guAudioPlayer'>
 		<div class='playerContainer'>
-			<div class='guPlayerBtn '>
+			<div class='guPlayerBtn {{#isPlaying}}playerIsPlaying{{/isPlaying}}' on-click='triggerPlayPause'>
+				{{#canPlay}}
 				<svg x="0px" y="0px" viewBox="0 0 100 100">
 					<circle fill="#AAD8F1" cx="50" cy="50" r="48"/>
 					<polygon class='guPause' points="45.9,65.5 37.6,65.5 37.6,34.5 39.6,32.5 45.9,32.5 "/>
 					<polygon class='guPause' points="62.4,63.5 60.4,65.5 54.1,65.5 54.1,32.5 62.4,32.5 "/>
 					<polygon class='guPlay' points="72.2,49.3 38.1,35.2 36.9,36.1 36.9,63.9 38.1,64.8 72.2,50.7 "/>
 				</svg>
+				{{/canPlay}}
 			</div>
 		
 			<div class='guProgressContainer'>	
 				<div class='guListenLabel f-bodycopy'>Listen</div>
 				<div class='guProgressBar'>
-					<div class='guProgress'></div>
+					
+					<div class='guProgress' style='width: {{percentPlayed}}%;'></div>
+					<div class='guProgBarHit' on-mousedown='triggerMouseDown' on-mouseup='triggerMouseUp' on-mousemove='triggerMouseMove'></div>
 				</div>
-				<div class='guTimer f-textSans'>3:10 / 3:30</div>
+				<div class='guTimer f-textSans'>{{calcPosition}} / {{calcDuration}}</div>
 			</div>
 		</div>
 
@@ -60,6 +65,14 @@
 	display: none;
 }
 
+.playerIsPlaying .guPause {
+	display: block;
+}
+
+.playerIsPlaying .guPlay {
+	display: none;
+}
+
 .guProgressContainer {
 	max-width: 640px;
 	padding-left: 10px;
@@ -82,15 +95,21 @@
 .guProgressBar {
 	margin: 5px 0;
 	position: relative;
-	height: 4px;
+	height: 15px;
 	background: #767676;
+	cursor: pointer;
+}
+
+.guProgBarHit {
+	width: 100%;
+	height: 100%;
+	position: absolute;
 }
 
 .guProgress {
 	background: #AAD8F1;
 	position: absolute;
-	width: 50%;
-	height: 4px;
+	height: 15px;
 }
 
 .guPodcastLinks {
@@ -166,7 +185,95 @@
 
 <script>
 
+var convertTime = function(time){
+					//convert seconds to MM:SS format
+					var minutes = Math.floor(time / 60);
+					var seconds = Math.floor(time - (minutes * 60));
+					if(seconds < 10 ){
+						seconds = "0"+ seconds.toString();
+					} 
+					return minutes + ':' + seconds;
+				}
+
+
 component.exports = {
+
+	data: {
+			isPlaying: false,
+			canPlay: false,
+			duration: 0, // seconds long audio file
+			position: 0, // current play position in seconds
+			currentPosition: 0  //seconds that have played
+			
+	},
+	computed: {
+		calcDuration: function(){
+			var d = this.get('duration')
+			return convertTime(d);
+		},
+		calcPosition: function(){
+			var d = this.get('position')
+			return convertTime(d);
+		},
+		percentPlayed: function(){
+			return this.get('position') / this.get('duration') * 100;
+		}
+	},
+	onrender: function(){
+		//component reference
+		var that = this;
+		var isMouseDown = false;
+		var progBarEl = this.find('.guProgressBar');
+		//player reference
+		var audioPlayer = this.find('audio');
+		audioPlayer.onloadeddata = function(e){
+			that.set('canPlay', true);
+			that.set('duration', audioPlayer.duration);
+		}
+		audioPlayer.ontimeupdate = function(e){
+			that.set('position', audioPlayer.currentTime)
+		}
+
+
+
+		//assigh events
+		this.on({
+			triggerPlayPause: function(e){
+				this.toggle('isPlaying')
+			},
+			triggerMouseMove: function(e){
+				if(isMouseDown){
+						var rect =  progBarEl.getBoundingClientRect();
+						var width = rect.right - rect.left;
+				        var offsetX = e.original.clientX - rect.left;
+				 		var pct = offsetX / width;
+
+				 		console.log(offsetX, width, this.get('duration'), this.get('duration') * pct)
+				 		audioPlayer.currentTime = this.get('duration') * pct;
+
+				}
+			},
+			triggerMouseDown: function(e){
+				isMouseDown = true;
+			},
+			triggerMouseUp: function(e){
+				isMouseDown = false;
+			}
+
+
+		})
+		this.observe('isPlaying', function(state){
+			if(state == true){
+				audioPlayer.play();
+			} else {
+				audioPlayer.pause();
+			}
+		})
+
+
+
+		//audioPlayer.play();
+	}
 
 }
 

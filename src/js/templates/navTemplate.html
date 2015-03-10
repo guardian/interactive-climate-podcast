@@ -1,8 +1,8 @@
 <div class='epLabel f-bodyCopy'>Podcast episodes</div>
 
-{{#nav:i}}
-	<div class='guNavBtn f-textSans active'>{{i + 1}}</div>
-{{/nav}}
+{{#podcasts:i}}
+	<div on-click='changeEpisode:{{podcast.episode}}' class='guNavBtn f-textSans {{#podcast.published =="TRUE"}}active{{/podcast.published}} {{#selected}}selected{{/selected}}'>{{i + 1}}</div>
+{{/podcasts}}
 
 
 <div class='guNavSubscribe f-textSans'>Subscribe at iTunes</div>

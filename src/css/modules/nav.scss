@@ -24,15 +24,17 @@
 	vertical-align: bottom;
 }
 
+.guNavBtn.active {
+	background: #005689;
+	color: #fff;
+}
+
 .guNavBtn.selected {
 	background: #333;
 	color: #fff;
 }
 
-.guNavBtn.active {
-	background: #005689;
-	color: #fff;
-}
+
 
 
 
