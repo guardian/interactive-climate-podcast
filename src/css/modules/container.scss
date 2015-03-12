@@ -112,13 +112,27 @@
 
 	.headerContent {
 		position: absolute;
-		top: 40px;
-		left: 40px;
+		width: 100%;
+		display: table;
+		
+		.guHeaderLogo {
+			width: 165px;
+			display: table-cell;
+			height: 10px;
+		}
+
+		.guHeaderText {
+			padding-right: 50px;
+			display: table-cell;
+		}
+
 	}
 
 	.guHeader {
 		background-position: center top;
 		height: 400px;
+
+		
 	}
 }
 
@@ -132,6 +146,14 @@
 		width: 980px;
 	}
 
+
+	.headerContent {
+		.guHeaderLogo {
+			width: 185px;
+		}
+	}
+
+
 }
 
 @media (min-width: 1140px){
@@ -143,6 +165,13 @@
 	.guContainer {
 		width: 1140px;
 	}
+
+	.headerContent {
+		.guHeaderLogo {
+			width: 220px;
+		}
+	}
+
 
 }
 
@@ -162,14 +191,17 @@
 	}
 
 	.headerContent {
-		left: 380px;
-
-		padding-bottom: 40px;
-
+	
 		h1 {
 			font-size: 4rem;
 			line-height: 4.2rem;
 		}
+
+
+		.guHeaderLogo {
+			width: 240px;
+		}
+	
 
 
 	}
