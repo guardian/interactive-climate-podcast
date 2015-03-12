@@ -14,7 +14,18 @@
 	{{^params.embed}}
 		{{#selected}}
 		<div intro-outro='slide' class='epContent'>
+
 			<div class='colA'>
+				{{#elementOrder:i}}
+					{{#this == 'quote'}}
+						<quoteTemplate elements="{{elements[this]}}"/>
+					{{/this}}
+
+				{{/elementOrder}}
+			</div>
+
+
+			<div class='colB'>
 
 				{{#elementOrder:i}}
 					{{#this == 'lexicon'}}
@@ -27,12 +38,10 @@
 				{{/elementOrder}}
 
 			</div>
-			<div class='colB'>
+
+			<div class='colC'>
 				
 				{{#elementOrder:i}}
-					{{#this == 'quote'}}
-						<quoteTemplate elements="{{elements[this]}}"/>
-					{{/this}}
 
 					{{#this == 'resource'}}
 						<referencesTemplate elements="{{elements[this]}}"/>
@@ -40,6 +49,7 @@
 				{{/elementOrder}}
 
 			</div>
+			
 
 		</div>
 		{{/selected}}
