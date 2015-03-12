@@ -1,10 +1,15 @@
 <div class="guInteractive">
   	
-    {{^params.embed}}
+    
   	<div class='guSlice guHeader'>
-  		<div class='guContainer'>The biggest story in the world</div>
+  	   <div class='guContainer'>
+          <div class='headerContent'>
+            <h1 class='f-headline'>{{config.headline}}</h1>
+            <p class='headerCopy f-bodycopy'>{{{config.standfirst}}}</p>
+          </div>
+       </div>
   	</div>
-
+    {{^params.embed}}
   	 <div class='guSlice guNav'>
   	 	<div class='guContainer'>
   			<navTemplate />

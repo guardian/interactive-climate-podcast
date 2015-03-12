@@ -9,7 +9,8 @@ define([
     'rvc!templates/quoteTemplate',
     'rvc!templates/referencesTemplate',
     'rvc!templates/lexiconTemplate',
-    'iframe-messenger'
+    'iframe-messenger',
+    'analytics'
 ], function(
     get,
     ractiveTransition,
@@ -21,7 +22,8 @@ define([
     QuoteTemplate,
     ReferencesTemplate,
     LexiconTemplate,
-    iframeMessenger
+    iframeMessenger,
+    ga
 ) {
    'use strict';
 
@@ -57,6 +59,20 @@ define([
                         setSelected(episodeNumber);
                     }
                 })
+
+                this.observe( 'podcasts.*.hasPlayed', function ( newValue, oldValue, keypath ) {
+                    var index = /podcasts.(\d+).hasPlayed/.exec( keypath )[1];
+                    var episodeNumber = this.get('podcasts[' + index +']');
+                    if(newValue == true){
+                        window.ga('send', {
+                          'hitType': 'event',          // Required.
+                          'eventCategory': 'episode ' + episodeNumber.episode,   // Required.
+                          'eventAction': 'play'     // Required.
+
+                        });
+                    }
+                    
+                });
             }
         });
 
@@ -75,6 +91,7 @@ define([
                 }
             })
             base.set('podcasts', podcasts);
+
         }
 
 
@@ -83,10 +100,15 @@ define([
         get('http://interactive.guim.co.uk/spreadsheetdata/'+SPREADSHEET_KEY+'.json')
             .then(JSON.parse)
             .then(function(json){
+
+                //header data from google spreadsheet
+          
+                base.set('config', json.sheets.config[0]);
+        
+                //list of default assets from google spreadsheet
                 var assets = json.sheets.elements;
 
                 //process the data
-
                 var assetArray = [];
                 assets.forEach(function(d){
                     if(!assetArray[d.episode]){
@@ -94,7 +116,8 @@ define([
                             episode: d.episode,
                             podcast: {},
                             elementOrder: [],
-                            elements: {}
+                            elements: {},
+                            hasPlayed: false
                         }
                         assetArray[d.episode] = storageObj;
                     }

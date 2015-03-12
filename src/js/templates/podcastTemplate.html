@@ -1,11 +1,13 @@
-<div class='guPodcasts notPlaying'>
+<div class='guPodcasts'>
 
-	<div class='episodeLead'>
+	<div class='episodeLead' >
 		<div class='epBlock f-headline'>{{podcast.episode}}</div>
 		<div class='epInfo'>
-			<div class='epTitle f-headline'>{{podcast.title}}</div>
-			<div class='epDesc f-bodyCopy'>{{podcast.description}}</div>
-			<playerTemplate />
+			
+				<div class='epTitle f-headline'>{{podcast.leadtext}}</div>
+				<div class='epDesc f-bodyCopy'>{{podcast.supportingtext}}</div>
+				<playerTemplate />
+			
 		</div>
 	</div>
 
@@ -16,7 +18,7 @@
 
 				{{#elementOrder:i}}
 					{{#this == 'lexicon'}}
-						<lexiconTemplate elements={{elements[this]}}/>
+						<lexiconTemplate elements="{{elements[this]}}"/>
 					{{/this}}
 
 					{{#this == 'video' || this == 'photo'}}
@@ -24,21 +26,18 @@
 					{{/this}}
 				{{/elementOrder}}
 
-				
 			</div>
 			<div class='colB'>
-
 				
 				{{#elementOrder:i}}
 					{{#this == 'quote'}}
-						<quotesTemplate elements="{{elements[this]}}"/>
+						<quoteTemplate elements="{{elements[this]}}"/>
 					{{/this}}
 
 					{{#this == 'resource'}}
 						<referencesTemplate elements="{{elements[this]}}"/>
 					{{/this}}
 				{{/elementOrder}}
-
 
 			</div>
 

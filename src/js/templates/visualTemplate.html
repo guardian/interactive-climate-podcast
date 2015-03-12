@@ -1,6 +1,20 @@
+{{#elements}}
 <div class='epModule moduleBg moduleVisual'>
-	<div class='modHeader f-headline'><div class='guShareBtn shareTwt'></div>What you should know about the biggest story</div>
+	<div class='modHeader f-bodyHeading'>
+		<div class='guShareBtn shareTwt'></div>
+		{{leadtext}}
+		<div class="subtext f-textSans ">{{supportingtext}}</div>
+	</div>
 	<div class='moduleWrapper'>
-		<div class='modImgVid'></div>
+		<div class='modImgVid'>
+			{{#elementtype == 'photo'}}
+				<img src='{{url}}' >
+			{{/elementtype}}
+
+			{{#elementtype == 'video'}}
+
+			{{/elementtype}}
+		</div>
 	</div>
 </div>
+{{/elements}}

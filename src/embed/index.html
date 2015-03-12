@@ -8,13 +8,16 @@
     </head>
     <body>
         <style>
-          body, figure {
+            body, figure {
                 padding: 0;
                 margin: 0;
 
             }
-        </style>
 
+            html, body {
+                overflow: hidden;
+            }
+        </style>
         <!-- Use the same figure elm as NGW -->
         <figure class="element-interactive interactive"></figure>
 
@@ -25,7 +28,7 @@
         <script>
           var el = document.querySelector('.interactive');
           require = curl;
-          curl(['boot.js'], function(app) {
+          curl(['../boot.js'], function(app) {
                 app.boot(el);
           });
         </script>

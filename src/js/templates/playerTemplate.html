@@ -8,7 +8,7 @@
 		<div class='playerContainer'>
 			<div class='guPlayerBtn {{#isPlaying}}playerIsPlaying{{/isPlaying}}' on-click='triggerPlayPause'>
 				{{#canPlay}}
-				<svg x="0px" y="0px" viewBox="0 0 100 100">
+				<svg x="0px" y="0px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
 					<circle fill="#AAD8F1" cx="50" cy="50" r="48"/>
 					<polygon class='guPause' points="45.9,65.5 37.6,65.5 37.6,34.5 39.6,32.5 45.9,32.5 "/>
 					<polygon class='guPause' points="62.4,63.5 60.4,65.5 54.1,65.5 54.1,32.5 62.4,32.5 "/>
@@ -29,13 +29,10 @@
 		</div>
 
 		<div class='guPodcastLinks'>
-			<div class='guPodcastLink iTunes f-textSans'>Subscribe via iTunes</div>
-			<div class='guPodcastLink download f-textSans'>Download MP3</div>
+			<a href='{{podcast.url}}' target="_blank"><div class='guPodcastLink iTunes f-textSans'>Subscribe via iTunes</div></a>
+			<a href='{{podcast.url}}' target="_blank"><div class='guPodcastLink download f-textSans'>Download MP3</div></a>
 		</div>
 	</div>
-
-	
-	
 
 </div>
 
@@ -43,7 +40,15 @@
 
 <style>
 
+.podcastPlayer {
+	width: 100%;
+	display: block;
+	margin-top: 20px;
+}
 
+audio {
+	display: none;
+}
 
 .guAudioPlayer {
 	width: 100%;
@@ -57,8 +62,14 @@
 }
 
 .guPlayerBtn {
-	width: 40px;
+	width: 50px;
 	display: table-cell;
+	vertical-align
+}
+
+.guPlayerBtn svg {
+	width: 50px;
+	height: 50px;
 }
 
 .guPause {
@@ -168,6 +179,14 @@
 	.guPlayerBtn {
 		width: 100px;
 	}
+	.guPlayerBtn svg {
+		width: 80px;
+		height: 80px;
+	}
+
+	.guPlayerBtn svg {
+		width: 100px; 
+	}
 
 	.guListenLabel {
 		font-size: 1.15rem;
@@ -204,7 +223,6 @@ component.exports = {
 			duration: 0, // seconds long audio file
 			position: 0, // current play position in seconds
 			currentPosition: 0  //seconds that have played
-			
 	},
 	computed: {
 		calcDuration: function(){
@@ -265,6 +283,9 @@ component.exports = {
 		this.observe('isPlaying', function(state){
 			if(state == true){
 				audioPlayer.play();
+				if(!that.get('hasPlayed')){
+					that.set('hasPlayed', true)
+				}
 			} else {
 				audioPlayer.pause();
 			}

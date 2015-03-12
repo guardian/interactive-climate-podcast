@@ -131,6 +131,10 @@ module.exports = function(grunt) {
               dest: 'build/index.html'
           },
           {
+              src: 'src/embed/index.html',
+              dest: 'build/embed/index.html'
+          },
+          {
               src: 'bower_components/curl/dist/curl/curl.js',
               dest: 'build/assets/js/curl.js'
           },
@@ -188,7 +192,7 @@ module.exports = function(grunt) {
             maxOperations: 20,
             dryRun: (grunt.option('test')) ? true : false,
             headers: {
-                CacheControl: 180,
+                CacheControl: 60,
             },
             gzip: true,
             gzipExclude: ['.jpg', '.gif', '.jpeg', '.png']
@@ -196,7 +200,7 @@ module.exports = function(grunt) {
         base: {
             files: [{
                 cwd: 'build',
-                src: '*.*',
+                src: ['*.*', 'embed/*.*'],
                 dest: pkg.config.s3_folder
             }]
         },
