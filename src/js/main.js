@@ -9,6 +9,7 @@ define([
     'rvc!templates/quoteTemplate',
     'rvc!templates/referencesTemplate',
     'rvc!templates/lexiconTemplate',
+    'rvc!templates/videoTemplate',
     'iframe-messenger',
     'analytics'
 ], function(
@@ -22,6 +23,7 @@ define([
     QuoteTemplate,
     ReferencesTemplate,
     LexiconTemplate,
+    VideoTemplate,
     iframeMessenger,
     ga
 ) {
@@ -51,7 +53,8 @@ define([
                 visualTemplate: VisualTemplate,
                 quoteTemplate: QuoteTemplate,
                 referencesTemplate: ReferencesTemplate,
-                lexiconTemplate: LexiconTemplate
+                lexiconTemplate: LexiconTemplate,
+                videoTemplate: VideoTemplate
             },
             onrender: function(){
                 this.on({
