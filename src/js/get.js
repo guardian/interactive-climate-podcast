@@ -6,20 +6,37 @@ define([ 'promise' ], function ( Promise ) {
 	return function ( url, onsuccess, onerror ) {
 			
 		return new Promise( function ( fulfil, reject ) {
-			var xhr = new XMLHttpRequest();
+			var xdr, xhr;
 
-			xhr.open( 'GET', url );
-			if ( options.responseType ) {
-				xhr.responseType = options.responseType;
+			if ( window.XDomainRequest ) {
+				xdr = new XDomainRequest();
+				xdr.onerror = reject;
+				xdr.ontimeout = function () {};
+				xdr.onprogress = function () {};
+				xdr.onload = function() {
+					fulfil( xdr.responseText );
+				};
+				xdr.timeout = 5000;
+				xdr.open( 'get', url );
+				xdr.send();
 			}
+			else {
+				xhr = new XMLHttpRequest();
 
-			xhr.onload = function () {
-				fulfil( options.responseType ? xhr.response : xhr.responseText );
-			};
+				xhr.open( 'GET', url );
 
-			xhr.onerror = reject;
+				if ( options.responseType ) {
+					xhr.responseType = options.responseType;
+				}
 
-			xhr.send();
+				xhr.onload = function () {
+					fulfil( options.responseType ? xhr.response : xhr.responseText );
+				};
+
+				xhr.onerror = reject;
+
+				xhr.send();
+			}
 		});
 
 	

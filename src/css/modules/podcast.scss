@@ -23,6 +23,7 @@
 		color: #AAD8F1;
 		font-size: 6rem;
 		vertical-align: top;
+		line-height: 1;
 	}
 
 	.epInfo {
@@ -139,6 +140,10 @@
 		img {
 			width: 100%;
 			display: block;
+		}
+
+		.media-primary {
+			margin: 0;
 		}
 	}
 
