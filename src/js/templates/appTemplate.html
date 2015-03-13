@@ -103,7 +103,11 @@
             </div>
               <div class='guHeaderText'>
                
-                <p class='headerCopy f-bodycopy'>{{{config.standfirst}}}</p>
+                <p class='headerCopy f-bodyCopy'>{{{config.standfirst}}}</p>
+                    {{#params.embed}}
+                         <div class='followBtn f-textSans'>Follow the series</div>
+
+                    {{/params.embed}}
               </div>
           </div>
        </div>
@@ -115,6 +119,8 @@
   		</div>
   	</div>
     {{/params.embed}}
+
+
 
   	<div class='guSlice guContent'>
   		<div class='guContainer'>

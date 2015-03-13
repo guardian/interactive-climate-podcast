@@ -1,7 +1,7 @@
 <div class='epLabel f-bodyCopy'>Podcast episodes</div>
 
 {{#podcasts:i}}
-	<div on-click='changeEpisode:{{podcast.episode}}' class='guNavBtn f-textSans {{#podcast.published =="TRUE"}}active{{/podcast.published}} {{#selected}}selected{{/selected}}'>{{i + 1}}</div>
+	<div {{#podcast.published =="TRUE"}}on-click='changeEpisode:{{podcast.episode}}'{{/podcast.published}} class='guNavBtn f-textSans {{#podcast.published =="TRUE"}}active{{/podcast.published}} {{#selected}}selected{{/selected}}'>{{i + 1}}</div>
 {{/podcasts}}
 
 
