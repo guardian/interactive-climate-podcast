@@ -1,0 +1,17 @@
+<div class='guShareBtn shareTwt' on-click='share'></div>
+
+
+
+<script>
+	component.exports = {
+		onrender : function(){
+			this.on('share', function(){
+				var shareUrl = 'http://gu.com/p/46hjf'
+				var text = 'The biggest story in the world podcast: Episode ' + this.get('podcast.episode') + ', ' + this.get('podcast.leadtext');
+				var shareLink = 'https://twitter.com/intent/tweet?url=' + encodeURIComponent( shareUrl ) + '&text=' + encodeURIComponent( text );
+				window.open(shareLink, 'twitter', 'width=626,height=436');
+			})
+		}
+	}
+
+</script>

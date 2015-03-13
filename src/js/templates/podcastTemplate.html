@@ -17,8 +17,8 @@
 
 			<div class='colA'>
 				{{#elementOrder:i}}
-					{{#this == 'quote'}}
-						<quoteTemplate elements="{{elements[this]}}"/>
+					{{#this == 'resource'}}
+						<referencesTemplate elements="{{elements[this]}}"/>
 					{{/this}}
 
 				{{/elementOrder}}
@@ -42,10 +42,10 @@
 			<div class='colC'>
 				
 				{{#elementOrder:i}}
-
-					{{#this == 'resource'}}
-						<referencesTemplate elements="{{elements[this]}}"/>
+					{{#this == 'quote'}}
+						<quoteTemplate elements="{{elements[this]}}"/>
 					{{/this}}
+					
 				{{/elementOrder}}
 
 			</div>

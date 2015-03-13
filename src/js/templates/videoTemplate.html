@@ -2,6 +2,12 @@
 	{{^videoLoaded}}
 	<div class='coverImage' on-click='loadVideo'>
 		<img src='{{posterurl}}'>
+		<div class='playBtnIframe'>
+			<svg x="0px" y="0px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
+				<circle fill="#F1C73D" cx="50" cy="50" r="48"/>
+				<polygon class='guPlay' points="72.2,49.3 38.1,35.2 36.9,36.1 36.9,63.9 38.1,64.8 72.2,50.7 "/>
+			</svg>
+		</div>
 	</div>
 	{{/videoLoaded}}
 
@@ -11,6 +17,28 @@
 	</div>
 	{{/videoLoaded}}
 </div>
+
+<style>
+
+	.coverImage {
+		position: relative;
+	}
+	.playBtnIframe {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 80px;
+	}
+
+	.playBtnIframe svg {
+		position: absolute;
+		top: -50px;
+		left: -50px;
+		width: 80px;
+		height: 80px;
+	}
+
+</style>
 
 
 <script>

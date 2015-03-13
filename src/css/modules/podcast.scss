@@ -20,8 +20,8 @@
 		width: 60px;
 		padding-right: 20px;
 		text-align: center;
-		color: #AAD8F1;
-		font-size: 5rem;
+		color: #bdbdbd;
+		font-size: 72px;
 		vertical-align: top;
 		line-height: 1;
 		font-weight: 100;
@@ -41,7 +41,7 @@
 	}
 
 	.epTitle {
-		font-size: 1.75rem;
+		font-size: 30px;
 		float: left;
 		width: 100%;
 		display: block;
@@ -49,8 +49,8 @@
 
 	.epDesc {
 		padding-top: 20px;
-		font-size: .8rem;
-		line-height: 1.25rem;
+		font-size: 14px;
+		line-height: 20px;
 		color: #D8D8D8;
 		width: 100%;
 		float: left;
@@ -88,14 +88,14 @@
 
 	.modHeader {
 		width: 100%;
-		font-size: 1rem;
-		line-height: 1.5rem;
+		font-size: 18px;
+		line-height: 24px;
 		color: #333;
 	}
 }
 
 .moduleBg {
-	background: #CED7CD;
+	background: #dcdcdc;
 }
 
 //modules
@@ -105,15 +105,15 @@
 	margin-top: 15px;
 	.keyWord {
 		width: 100%;
-		line-height: 2rem;
-		font-size: 1.75rem;
+		line-height: 30px;
+		font-size: 24px;
 		color: #333;
 		padding-top: 15px;
 	}
 
 	.pronounciation {
 		color: #fff;
-		font-size: 1.5rem;
+		font-size: 24px;
 	}
 
 	.keyWord::after {
@@ -127,8 +127,8 @@
 	}
 
 	.keyWordExplainer {
-		font-size: .9rem;
-		line-height: 1.5rem;
+		font-size: 14px;
+		line-height: 20px;
 		color: #333;
 		padding-top: 5px;
 	}
@@ -144,8 +144,8 @@
 		.subtext {
 			margin-top: 5px;
 			display: block;
-			font-size: .9rem;
-			line-height: 1rem;
+			font-size: 14px;
+			line-height: 20px;
 			color: #333;
 		}
 	}
@@ -190,13 +190,15 @@
 		padding-left: 35px;
 		min-height: 30px;
 		background-size: 20px;
-		line-height: 1.4rem;
+		font-size: 14px;
+		line-height: 20px;
 		background-position: left 10px;
 		background-repeat: no-repeat;
+		color: #D8D8D8;
 		background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCAzMCAzMCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMzAgMzAiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxnPjxwb2x5Z29uIGZpbGw9IiM3Njc2NzYiIHBvaW50cz0iMjcuMywyOC4zIDI1LjgsMjkuOCA1LjEsMjkuOCAzLjYsMjguMyAzLjYsMS43IDUuMSwwLjIgMjEuMywwLjIgMjcuMyw2LjEgIi8+PC9nPjxyZWN0IHg9IjYuNSIgeT0iOS4xIiBmaWxsPSIjRkZGRkZGIiB3aWR0aD0iMTcuOCIgaGVpZ2h0PSIyLjIiLz48cmVjdCB4PSI2LjUiIHk9IjEzLjUiIGZpbGw9IiNGRkZGRkYiIHdpZHRoPSIxNy44IiBoZWlnaHQ9IjIuMiIvPjxyZWN0IHg9IjYuNSIgeT0iMTgiIGZpbGw9IiNGRkZGRkYiIHdpZHRoPSIxMC40IiBoZWlnaHQ9IjIuMiIvPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjwvc3ZnPg==);
 
 		a, a:visited, a:active {
-			color: #fff;
+			color: #D8D8D8;
 			text-decoration: none;
 		}
 
@@ -249,13 +251,15 @@
 		.quoteText {
 			display: table-cell;
 			padding: 20px 0;
-			font-size: 1.5rem;
-			line-height: 1.75rem;
+			font-size: 24px;
+			line-height: 30px;
+			color: #D8D8D8;
 
 			span {
 				font-size: 1rem;
 				color: #979797;
 				display: block;
+				margin-top: 5px;
 			}
 		}
 	}
@@ -267,7 +271,7 @@
 		
 		.epBlock {
 			width: 100px;
-			font-size: 8rem;
+			font-size: 72px;
 		}
 
 	}
@@ -291,11 +295,11 @@
 
 		.epBlock {
 			width: 160px;
-			font-size: 10rem;
+			font-size: 160px;
 		}
 
 		.epTitle {
-			font-size: 2.25rem;
+			font-size: 36px;
 		}
 
 		.epDesc {
@@ -313,14 +317,14 @@
 @media (min-width: 980px){
 
 	.guPodcasts:first-of-type {
-		padding-top: 20px;
+		padding-top: 40px;
 	}
 	.episodeLead  {
 		width: 790px;
 
 		.epBlock {
 			width: 185px;
-			font-size: 10rem;
+			font-size: 160px;
 		}
 
 
@@ -357,7 +361,7 @@
 
 
 		.modHeader {
-			font-size: 1.25rem;
+			font-size: 18px;
 		}
 	}
 
@@ -371,17 +375,17 @@
 		width: 790px;
 
 		.epTitle {
-			font-size: 3rem;
+			font-size: 42px;
 		}
 
 		.epBlock {
 			width: 220px;
-			font-size: 14rem;
+			font-size: 24px;
 		}
 
 		.epDesc {
-			font-size: 1rem;
-			line-height: 1.5rem;
+			font-size: 18px;
+			line-height: 24px;
 			padding-bottom: 20px;
 		}
 
@@ -422,7 +426,7 @@
 		.epBlock {
 			width: 240px;
 			padding-right: 20px;
-			font-size: 12rem;
+			font-size: 220px;
 		}
 
 
@@ -455,7 +459,7 @@
 
 		.moduleKeyWord {
 			display: inline-block;
-			max-width: 49%;
+			max-width: 50%;
 			padding-right: 10px;
 			vertical-align: top;
 		}
