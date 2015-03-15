@@ -1,16 +1,25 @@
-<div class='guShareBtn shareTwt' on-click='share'></div>
-
+<div class='guShareBtn shareTwt' on-click='shareTwt'></div>
+{{#fbk}}
+<div class='guShareBtn shareFbk' on-click='shareFbk'></div>
+{{/fbk}}
 
 
 <script>
 	component.exports = {
 		onrender : function(){
-			this.on('share', function(){
-				var shareUrl = 'http://gu.com/p/46hjf'
-				var text = 'The biggest story in the world podcast: Episode ' + this.get('podcast.episode') + ', ' + this.get('podcast.leadtext');
-				var shareLink = 'https://twitter.com/intent/tweet?url=' + encodeURIComponent( shareUrl ) + '&text=' + encodeURIComponent( text );
-				window.open(shareLink, 'twitter', 'width=626,height=436');
-			})
+			this.on({
+				shareTwt: function(){
+					var shareUrl = 'http://gu.com/p/46hjf' + '#episode=' + this.get('podcast.episode');
+					var text = 'The biggest story in the world podcast: Episode ' + this.get('podcast.episode') + ', ' + this.get('podcast.leadtext');
+					var shareLink = 'https://twitter.com/intent/tweet?url=' + encodeURIComponent( shareUrl ) + '&text=' + encodeURIComponent( text );
+					window.open(shareLink, 'twitter', 'width=626,height=436');
+				},
+				shareFbk: function(){
+					var shareUrl = 'http://gu.com/p/46hjf' + '#episode=' + this.get('podcast.episode');
+					var sharer = "https://www.facebook.com/sharer/sharer.php?u=";
+					window.open(sharer + encodeURIComponent( shareUrl, 'sharer', 'width=626,height=436'));
+				}
+			});
 		}
 	}
 
