@@ -50,7 +50,7 @@
 	.guHeaderLogo {
 		vertical-align: middle;
 		display: table-cell;
-		width: 150px;
+		width: 120px;
 
 
 
@@ -71,6 +71,7 @@
 	}
 }
 
+
 .followBtn {
 	background: #ff9b0b;
 	border-radius: 20px;
@@ -78,6 +79,7 @@
 	float: left;
 	margin-top: 10px;
 	display: none;
+	color: #fff;
 }
 
 .guNav {
@@ -95,10 +97,12 @@
 	padding: 0 10px;
 }
 
-@media (min-width: 280px){
+@media (min-width: 310px){
 
 	.guHeader {
-
+		.guHeaderLogo {
+			width: 150px;
+		}
 		.headerCopy {
 				font-size: 18px;
 				line-height: 24px;
