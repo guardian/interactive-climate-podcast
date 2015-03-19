@@ -223,7 +223,6 @@ var convertTime = function(time){
 component.exports = {
 
 	data: {
-			isPlaying: false,
 			canPlay: false,
 			duration: 0, // seconds long audio file
 			position: 0, // current play position in seconds
@@ -271,7 +270,7 @@ component.exports = {
 				        var offsetX = e.original.clientX - rect.left;
 				 		var pct = offsetX / width;
 
-				 		console.log(offsetX, width, this.get('duration'), this.get('duration') * pct)
+				 		//console.log(offsetX, width, this.get('duration'), this.get('duration') * pct)
 				 		audioPlayer.currentTime = this.get('duration') * pct;
 
 				}

@@ -61,22 +61,49 @@ define([
             },
             onrender: function(){
                 this.on({
-                    'navTemplate.changeEpisode': function(e, episodeNumber){
-                        setSelected(episodeNumber);
+                    'navTemplate.changeEpisode': function(e, podcast){
+           
+                        if(podcast.published == 'TRUE'){
+                            setSelected(podcast.episode, true);
+                        }
+                        
                     }
                 })
 
-                this.observe( 'podcasts.*.hasPlayed', function ( newValue, oldValue, keypath ) {
-                    var index = /podcasts.(\d+).hasPlayed/.exec( keypath )[1];
-                    var episodeNumber = this.get('podcasts[' + index +']');
-                    if(newValue == true){
-                        window.ga('send', {
-                          'hitType': 'event',          // Required.
-                          'eventCategory': 'episode ' + episodeNumber.episode,   // Required.
-                          'eventAction': 'play'     // Required.
+                this.observe( {
+                    'podcasts.*.hasPlayed': function ( newValue, oldValue, keypath ) {
+                        var index = /podcasts.(\d+).hasPlayed/.exec( keypath )[1];
+                        var episodeNumber = this.get('podcasts[' + index +']');
+                        if(newValue == true){
+                            window.ga('send', {
+                              'hitType': 'event',          // Required.
+                              'eventCategory': 'episode ' + episodeNumber.episode,   // Required.
+                              'eventAction': 'play'     // Required.
 
-                        });
+                            });
+                        }
+                    },
+                    'podcasts.*.isPlaying': function ( newValue, oldValue, keypath ) {
+                        var index = /podcasts.(\d+).isPlaying/.exec( keypath )[1];
+                        if(newValue == true){
+                            var index = /podcasts.(\d+).isPlaying/.exec( keypath )[1];
+
+                            var podcasts = base.get('podcasts')
+
+                            podcasts.forEach(function(d,i){
+                                if(i!=index){
+                                    d.isPlaying = false;
+                                    d.selected = false;
+                                } else {
+                                    d.selected = true;
+                                    d.hasBeenViewed = true;
+                                }
+                            })
+                            base.set('podcasts', podcasts);
+                        }
+
                     }
+
                     
                 });
             }
@@ -87,17 +114,25 @@ define([
         base.set('params', params)
 
         //set selected element
-        var setSelected = function(episodeNumber){
+        var setSelected = function(episodeNumber, animate){
             var podcasts = base.get('podcasts')
-            podcasts.forEach(function(d){
+            podcasts.forEach(function(d,i){
                 if(d.episode == episodeNumber){
                     d.selected = true;
+                    d.hasBeenViewed = true;
+                    if(animate && !params.embed){
+                        var curEl = document.getElementsByClassName('guPodcasts')[i].offsetTop + document.getElementsByClassName('guHeader')[0].offsetHeight + document.getElementsByClassName('guNav')[0].offsetHeight;
+                     window.scrollTo(0, curEl)
+
+                    }
+                    
                 }  else {
                     d.selected = false;
                 }
             })
             base.set('podcasts', podcasts);
 
+            //window.scrollTo(0,1000)
         }
 
 
@@ -123,14 +158,20 @@ define([
                             podcast: {},
                             elementOrder: [],
                             elements: {},
-                            hasPlayed: false
+                            hasPlayed: false,
+                            isPlaying: false,
+                            hasBeenViewed: false
                         }
                         assetArray[d.episode] = storageObj;
+
                     }
 
                     // assetArray[d.episode]
                     if(d.elementtype == 'podcast'){
+      
                         assetArray[d.episode].podcast = d;
+                  
+
                     } else {
                         //check of elementtype exists
                         if( !assetArray[d.episode]['elements'][d.elementtype] ){
@@ -139,6 +180,7 @@ define([
                             //store elements by order from spreadsheet
                             assetArray[d.episode]['elementOrder'].push( d.elementtype )
                         }
+         
                          assetArray[d.episode]['elements'][d.elementtype].push( d );
 
 
@@ -148,7 +190,13 @@ define([
          
                 base.set('podcasts', assetArray.slice(1, assetArray.length))
 
-                setSelected(1);
+                if(params.episode){
+                    setSelected(params.episode, true);
+                } else {
+                    setSelected(1, false);
+                }
+
+                
 
                 //linkmap = json.sheets.cardmapping;
             });
