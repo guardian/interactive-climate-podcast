@@ -52,6 +52,9 @@
 		display: table-cell;
 		width: 120px;
 
+		svg {
+			width: 120px;
+		}
 
 
 	}
@@ -102,6 +105,10 @@
 	.guHeader {
 		.guHeaderLogo {
 			width: 150px;
+
+			svg {
+				width: 150px;
+			}
 		}
 		.headerCopy {
 				font-size: 18px;

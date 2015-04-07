@@ -26,8 +26,7 @@ define([
     LexiconTemplate,
     VideoTemplate,
     ShareTemplate,
-    iframeMessenger,
-    ga
+    iframeMessenger
 ) {
    'use strict';
 
@@ -67,6 +66,18 @@ define([
                             setSelected(podcast.episode, true);
                         }
                         
+                    },
+                    'podcastTemplate.showContent': function(e, episode){
+             
+                            
+                            var podcasts = base.get('podcasts');
+
+                            podcasts.forEach(function(d,i){
+                                if(d.episode == episode){
+                                    d.hasBeenViewed = true;
+                                }
+                            })
+                            base.set('podcasts', podcasts);
                     }
                 })
 
@@ -116,13 +127,15 @@ define([
         //set selected element
         var setSelected = function(episodeNumber, animate){
             var podcasts = base.get('podcasts')
+            var curEl = undefined;
+
             podcasts.forEach(function(d,i){
                 if(d.episode == episodeNumber){
                     d.selected = true;
                     d.hasBeenViewed = true;
                     if(animate && !params.embed){
-                        var curEl = document.getElementsByClassName('guPodcasts')[i].offsetTop + document.getElementsByClassName('guHeader')[0].offsetHeight + document.getElementsByClassName('guNav')[0].offsetHeight;
-                     window.scrollTo(0, curEl)
+                        curEl = document.getElementsByClassName('guPodcasts')[i];
+  
 
                     }
                     
@@ -132,7 +145,10 @@ define([
             })
             base.set('podcasts', podcasts);
 
-            //window.scrollTo(0,1000)
+            if(curEl != undefined){
+                curEl.scrollIntoView()
+            }
+    
         }
 
 
@@ -165,7 +181,7 @@ define([
                         assetArray[d.episode] = storageObj;
 
                     }
-
+ 
                     // assetArray[d.episode]
                     if(d.elementtype == 'podcast'){
       

@@ -12,6 +12,16 @@
 	</div>
 
 	{{^params.embed}}
+		{{# !selected && !hasBeenViewed}}
+		<div class='epContent'>
+			<div class='colA'>&nbsp;</div>
+			<div class='colB'>
+				<div on-click='showContent:{{episode}}' class='relatedBtn f-textSans'>More from this episode</div>
+			</div>
+			<div class='colC'>&nbsp;</div>
+		</div>
+		{{/ !selected && !hasBeenViewed}}
+
 		{{#selected || hasBeenViewed}}
 		<div class='epContent'>
 
