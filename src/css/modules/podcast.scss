@@ -1,7 +1,7 @@
 .guPodcasts {
 	color: white;
 	padding: 10px 10px;
-	border-top: 1px solid #767676;
+	border-top: 1px solid #dcdcdc;
 }
 
 .guPodcasts:first-of-type {
@@ -20,7 +20,7 @@
 		width: 60px;
 		padding-right: 20px;
 		text-align: center;
-		color: #bdbdbd;
+		color: #dcdcdc;
 		font-size: 72px;
 		vertical-align: top;
 		line-height: 1;
@@ -31,7 +31,7 @@
 		display: table-cell;
 		padding-right: 10px;
 		vertical-align: top;
-		color: #F1F1F1;
+		color: #333;
 	}
 
 	.infoContent {
@@ -51,7 +51,7 @@
 		padding-top: 20px;
 		font-size: 14px;
 		line-height: 20px;
-		color: #D8D8D8;
+		color: #767676;
 		width: 100%;
 		float: left;
 		display: block;
@@ -84,8 +84,9 @@
 .relatedBtn {
 	border-radius: 20px;
 	padding: 10px 25px;
-	border: 1px solid #bdbdbd;
-	color: #bdbdbd;
+	border: 1px solid #005689;
+	color: #005689;
+
 	float: left;
 	cursor: pointer;
 }
@@ -104,7 +105,7 @@
 }
 
 .moduleBg {
-	background: #dcdcdc;
+	background: #eaeaea;
 }
 
 //modules
@@ -128,7 +129,7 @@
 	.keyWord::after {
 		width: 60px;
 		height: 1px;
-		background: #333;
+		background: #bdbdbd;
 		position: absolute;
 		content: '';
 		top: 0;
@@ -189,7 +190,7 @@
 	margin: 0 0 20px 0;
 	padding: 0;
 	.modHeader {
-		color: #F1F1F1;
+		color: #333;
 	}
 
 	.modCitation {
@@ -203,11 +204,11 @@
 		line-height: 20px;
 		background-position: left 10px;
 		background-repeat: no-repeat;
-		color: #D8D8D8;
+		color: #333;
 		background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCAzMCAzMCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMzAgMzAiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxnPjxwb2x5Z29uIGZpbGw9IiM3Njc2NzYiIHBvaW50cz0iMjcuMywyOC4zIDI1LjgsMjkuOCA1LjEsMjkuOCAzLjYsMjguMyAzLjYsMS43IDUuMSwwLjIgMjEuMywwLjIgMjcuMyw2LjEgIi8+PC9nPjxyZWN0IHg9IjYuNSIgeT0iOS4xIiBmaWxsPSIjRkZGRkZGIiB3aWR0aD0iMTcuOCIgaGVpZ2h0PSIyLjIiLz48cmVjdCB4PSI2LjUiIHk9IjEzLjUiIGZpbGw9IiNGRkZGRkYiIHdpZHRoPSIxNy44IiBoZWlnaHQ9IjIuMiIvPjxyZWN0IHg9IjYuNSIgeT0iMTgiIGZpbGw9IiNGRkZGRkYiIHdpZHRoPSIxMC40IiBoZWlnaHQ9IjIuMiIvPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjwvc3ZnPg==);
 		background-size: 40px 15px;
 		a, a:visited, a:active {
-			color: #D8D8D8;
+			color: #005689;
 			text-decoration: none;
 		}
 
@@ -220,7 +221,7 @@
 	.modCitation::after {
 		width: 60px;
 		height: 1px;
-		background: #979797;
+		background: #bdbdbd;
 		position: absolute;
 		content: '';
 		top: 0;
@@ -261,7 +262,7 @@
 
 			font-size: 24px;
 			line-height: 30px;
-			color: #D8D8D8;
+			color: #333;
 
 			span {
 				font-size: 14px;

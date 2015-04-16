@@ -12,9 +12,7 @@
 
 
 .guHeader {
-	background: #000;
 	min-height: 250px;
-	background: #333 url(../imgs/banner500.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
 
@@ -22,16 +20,18 @@
   	//background-size: auto 100%;
   	position: relative;
 
-
+  	background: url(../imgs/banner500.jpg) center bottom;
 
 
 	
 	h1 {
-		color: #eeb671;
+		color: #333;
 		margin: 0;
 		font-weight: 100;
 		font-size: 24px;
+
 		line-height: 30px;
+
 	}
 
 	.guContainer {
@@ -39,8 +39,12 @@
 		position: relative;
 		padding: 20px;
 
-		
 	}
+	.padded-multi-line {
+	  display: inline;
+	  
+	}
+
 }
 
 .headerContent {
@@ -68,9 +72,11 @@
 	.headerCopy {
 		font-size: 16px;
 		line-height: 20px;
-		color: #fff;
-		
+		color: #000;
 		margin: 0;
+		padding: 5px;
+
+
 	}
 }
 
@@ -86,12 +92,12 @@
 }
 
 .guNav {
-	background: #DFDFDF;
+	background: #eaeaea;
 	line-height: 2.5em;
 }
 
 .guContent {
-	background: #333;
+	background: #f6f6f6;
 }
 
 .guContainer {
@@ -113,7 +119,7 @@
 		.headerCopy {
 				font-size: 18px;
 				line-height: 24px;
-		
+	
 		}
 		.followBtn {
 			display: block;
@@ -145,7 +151,7 @@
 		.headerCopy {
 				font-size: 22px;
 				line-height: 24px;
-		
+					
 		}
 		
 
@@ -155,6 +161,10 @@
 
 
 @media (min-width: 740px){
+
+	.guHeader .guContainer {
+		background: url(../imgs/banner_740.jpg) center top;
+	}
 	
 	.guSlice::before, .guSlice::after {
 		width: calc((100% - 46.25rem) / 2);
@@ -193,7 +203,7 @@
 		
 		height: 300px;
 		background: #333 url(../imgs/banner.jpg);
-		background-position: center top;
+		background-position: right top;
 		
 	}
 
@@ -201,10 +211,15 @@
 		font-size: 24px;
 		line-height: 30pxrem;
 		padding-top: 50px;
+
 	}
 }
 
 @media (min-width: 980px){
+	
+	.guHeader .guContainer {
+		background: url(../imgs/banner_1300.jpg) center top;
+	}
 	
 	.guSlice::before, .guSlice::after {
 		width: calc((100% - 61.25rem) / 2);
@@ -234,7 +249,7 @@
 }
 
 @media (min-width: 1140px){
-	
+
 	.guSlice::before, .guSlice::after {
 		width: calc((100% - 71.25rem) / 2);
 	}
@@ -273,8 +288,8 @@
 	}
 
 	.guHeader .guContainer .headerContent .headerCopy {
-		  font-size: 32px;
-		  line-height: 36px;
+		  font-size: 36px;
+		  line-height: 42px;
 		  padding-top: 25px;
 	}
 
@@ -301,6 +316,7 @@
 		width: 1300px;
 
 	}
+
 
 
 

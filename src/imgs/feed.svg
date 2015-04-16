@@ -3,39 +3,9 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="25px" height="25px" viewBox="0 0 25 25" enable-background="new 0 0 25 25" xml:space="preserve">
-<circle fill="#FFFFFF" cx="5.3" cy="19.4" r="4.3"/>
+<circle fill="#005689" cx="5.3" cy="19.4" r="4.3"/>
 <g>
-	<path fill="#FFFFFF" d="M23.5,19.4C25.1,8.7,16-0.4,5.3,1.2v1.1c9.5,0,17.2,7.7,17.2,17.2"/>
+	<path fill="#005689" d="M23.5,19.4C25.1,8.7,16-0.4,5.3,1.2v1.1c9.5,0,17.2,7.7,17.2,17.2"/>
 </g>
-<path fill="#FFFFFF" d="M16,19.4c1.2-6.7-4-11.9-10.7-10.7v1.1c5.3,0,9.7,4.3,9.7,9.7h0H16z"/>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
+<path fill="#005689" d="M16,19.4c1.2-6.7-4-11.9-10.7-10.7v1.1c5.3,0,9.7,4.3,9.7,9.7l0,0h1V19.4z"/>
 </svg>
