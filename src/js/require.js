@@ -19,7 +19,7 @@ require.config({
     "Markdown.Converter": "../../bower_components/requirejs-plugins/lib/Markdown.Converter",
     text: "../../bower_components/text/text",
     rvc: "../../bower_components/rvc/rvc",
-    "ractive-transitions-slide": "../../bower_components/ractive-transitions-slide/ractive-transitions-slide"
+    "ractive-transitions-slide": "../../bower_components/ractive-transitions-slide/dist/ractive-transitions-slide"
   },
   packages: [
 

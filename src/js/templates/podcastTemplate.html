@@ -14,7 +14,7 @@
 	{{^params.embed}}
 		{{# !selected && !hasBeenViewed}}
 		<div class='epContent'>
-			<div class='colA'>&nbsp;</div>
+			<div class='colA' style="position:relative;pointer-events:none;z-index:-1;">&nbsp;</div>
 			<div class='colB'>
 				<div on-click='showContent:{{episode}}' class='relatedBtn f-textSans'>More from this episode</div>
 			</div>

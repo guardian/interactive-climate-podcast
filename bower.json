@@ -23,6 +23,7 @@
     "ractive": "0.6.1",
     "requirejs-plugins": "1.0.3",
     "text": "2.0.10",
-    "rvc": "0.2.3"
+    "rvc": "0.2.3",
+    "ractive-transitions-slide": "~0.2.1"
   }
 }
